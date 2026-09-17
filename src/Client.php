@@ -70,17 +70,17 @@ class Client
      */
     public function post(array $data = []): ?array
     {
-        return $this->request(self::METHOD_POST, $data);
+        return $this->request(Method::POST, $data);
     }
     
     /**
-     * @param string $method
+     * @param Method $method
      * @param array $data = []
      * @param array $query = []
      * 
      * @return array|NULL
      */
-    public function request(string $method, array $data = [], array $query = []): ?array
+    public function request(Method $method, array $data = [], array $query = []): ?array
     {
         // build options
         $options = [
@@ -95,7 +95,7 @@ class Client
         ];
         
         // make request
-        $response = (new GuzzleCLient())->request($method, $this->getUrl(), $options);
+        $response = (new GuzzleCLient())->request($method->value, $this->getUrl(), $options);
         
         // decode json
         $json = json_decode($response->getBody()->getContents(), true);
