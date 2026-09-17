@@ -18,28 +18,15 @@ class Client
     public const BASE_HREF = 'https://webhook.myclang.com/app/api/rest/public/v2/project/datahook/data-receiver';
     
     /**
-     * Methods.
-     */
-    public const METHOD_POST = 'POST';
-    
-    /**
-     * @var string
-     */
-    private $token;
-    
-    /**
-     * @var string
-     */
-    private $endpoint;
-    
-    /**
      * @param string $token
      * @param string $endpoint
      */
-    public function __construct(string $token, string $endpoint)
-    {
-        $this->token = $token;
-        $this->endpoint = $endpoint;
+    public function __construct(
+        
+        #[\SensitiveParameter]
+        private string $token,
+        private string $endpoint
+    ) {
         
         // load endpoints
         $this->loadEndpoints();
