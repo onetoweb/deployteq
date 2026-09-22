@@ -6,6 +6,6 @@
 
 ## [2.0.0] - 2026-09-22
 
- - Require php 8 or higher
+ - Require php 8.1 or higher
  - Drop support for guzzle 6
  - Add SensitiveParameter attribute
