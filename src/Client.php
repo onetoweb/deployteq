@@ -3,6 +3,7 @@
 namespace Onetoweb\Deployteq;
 
 use Onetoweb\Deployteq\Endpoint\Endpoints;
+use Onetoweb\Deployteq\Config\Method;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Client as GuzzleCLient;
 

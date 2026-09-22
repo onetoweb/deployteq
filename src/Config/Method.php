@@ -1,6 +1,6 @@
 <?php
 
-namespace Onetoweb\Innosend\Config;
+namespace Onetoweb\Deployteq\Config;
 
 enum Method: string {
     case POST = 'POST';

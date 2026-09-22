@@ -12,3 +12,7 @@
 ## [1.1.1] - 2026-09-17
 
  - Add SensitiveParameter attribute
+ 
+## [1.1.2] - 2026-09-22
+
+ - Bugfixes
